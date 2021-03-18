@@ -5,7 +5,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from collections import Counter
-from nltk.corpus import stopwords
+#from nltk.corpus import stopwords
 import streamlit as st
 
 
