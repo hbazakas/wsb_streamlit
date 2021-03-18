@@ -11,7 +11,9 @@ st.set_page_config(layout="wide")
 
 st.text('Reddit Trend Scraping')
 st.text('By Henry Bazakas')
-col1, col2 = st.beta_columns(2)
+col1, col2, col3 = st.beta_columns(2, 2, 1)
+
+col3.text("This page uses the last 6 hours of comments r/wallstreetbets and r/satoshistreetbets to rank the 10 most talked about stocks and cryptocurrencies on Reddit right now. Scraping the data and tabulating the top tickers takes about 60 seconds. These rankings are meant to be used for tracking trends and informing investment decisions. Invest at your own risk.")
 
 def comments_scraper(sub, comment_age, hot, case_sensitive = False):
     #Reddit API
