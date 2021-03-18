@@ -28,8 +28,8 @@ def comments_scraper(sub, comment_age, hot, case_sensitive = False):
         submission = reddit.submission(id=post_id)
         submission.comments.replace_more(limit=0)
         for comment in submission.comments.list():
-            '''Loops through all comments. comment.body is a string with each comment's contents.
-            comment.created is the time the comment was created.'''
+            #Loops through all comments. comment.body is a string with each comment's contents.
+            #comment.created is the time the comment was created.
             comment_age = (comment.created - time.time())/3600
             if comment_age <=comment_age:
                 comments += comment.body + " "
