@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 from collections import Counter
 #from nltk.corpus import stopwords
 import streamlit as st
+from streamlit_lottie import st_lottie
 st.set_page_config(layout="wide")
 
 def load_lottieurl(url: str):
