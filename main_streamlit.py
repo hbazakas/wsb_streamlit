@@ -9,6 +9,15 @@ from collections import Counter
 import streamlit as st
 st.set_page_config(layout="wide")
 
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+lottie_book = load_lottieurl('https://assets1.lottiefiles.com/packages/lf20_BiAtYn.json')
+st_lottie(lottie_book, speed=0.25, height=200, key="initial")
+
 st.title('Reddit Trend Scraping')
 st.subheader('By Henry Bazakas')
 col1, col2, col3 = st.beta_columns((3, 3, 2))
