@@ -7,7 +7,10 @@ from bs4 import BeautifulSoup
 from collections import Counter
 #from nltk.corpus import stopwords
 import streamlit as st
+st.set_page_config(layout="wide")
 
+st.text('Reddit Trend Scraping')
+st.text('By Henry Bazakas')
 
 def comments_scraper(sub, comment_age, hot, case_sensitive = False):
     #Reddit API
