@@ -13,7 +13,7 @@ st.title('Reddit Trend Scraping')
 st.subheader('By Henry Bazakas')
 col1, col2, col3 = st.beta_columns((3, 3, 2))
 
-with col3: st.write("This page uses the last 6 hours of comments [r/wallstreetbets]('https://www.reddit.com/r/wallstreetbets/new/') and [r/satoshistreetbets]('https://www.reddit.com/r/satoshistreetbets/new/') to rank the 10 most talked about stocks and cryptocurrencies on Reddit right now. Scraping the data and tabulating the top tickers takes about 60 seconds. These rankings are meant to be used for tracking trends and informing investment decisions. Invest at your own risk.")
+with col3: st.write("This page uses the last 6 hours of comments [r/wallstreetbets]('https://www.reddit.com/r/wallstreetbets/new/') and [r/satoshistreetbets]('https://www.reddit.com/r/satoshistreetbets/new/') to rank the 10 most talked about stocks and cryptocurrencies on Reddit right now. Scraping the data and tabulating the top tickers takes about 60 seconds. \n\nThese rankings are meant to be used for tracking trends and informing investment decisions. Invest at your own risk.")
 
 st.write("This page was created by Henry Bazakas in March 2021. If you\'re interested in how it was built or in Henry\'s other work, take a look at his [Github]('https://github.com/hbazakas'). If you've made a fortune investing in securities you learned about here, please let him know via a [tweet]('https://twitter.com/bighenbazakas') or [LinkedIn]('https://www.linkedin.com/in/henry-bazakas-471201143/') message. Thanks for checking out this project!")
 
