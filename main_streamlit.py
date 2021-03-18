@@ -11,6 +11,7 @@ st.set_page_config(layout="wide")
 
 st.text('Reddit Trend Scraping')
 st.text('By Henry Bazakas')
+col1, col2 = st.beta_columns(2)
 
 def comments_scraper(sub, comment_age, hot, case_sensitive = False):
     #Reddit API
@@ -138,4 +139,8 @@ def assemble_rankings(n, hours, hot):
 
 wsb, ssb = assemble_rankings(10, 6, 15)
 
-st.write("r/wallstreetbets leaderboard",wsb, "r/satishistreetbets leaderboard", ssb)
+col1.header("r/wallstreetbets leaderboard")
+col1.write(wsb)
+
+col2.header("r/satishistreetbets leaderboard")
+col2.write(ssb)
