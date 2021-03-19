@@ -21,7 +21,7 @@ hcol1, hcol2 = st.beta_columns((3, 1))
 hcol1.title('Reddit Trend Scraping')
 hcol1.subheader('By Henry Bazakas')
 
-with hcol2: st_lottie(lottie_book, speed=0.25, height=150, key="initial")
+with hcol2: st_lottie(lottie_book, speed=1, height=150, key="initial")
 
 col1, col2, col3 = st.beta_columns((3, 3, 2))
 with col3: st.write("This page uses the last 6 hours of comments [r/wallstreetbets]('https://www.reddit.com/r/wallstreetbets/new/') and [r/satoshistreetbets]('https://www.reddit.com/r/satoshistreetbets/new/') to rank the 10 most talked about stocks and cryptocurrencies on Reddit right now. Scraping the data and tabulating the top tickers takes about 60 seconds. \n\nThese rankings are meant to be used for tracking trends and informing investment decisions. Invest at your own risk.")
