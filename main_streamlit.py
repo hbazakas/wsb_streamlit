@@ -16,18 +16,24 @@ def load_lottieurl(url: str):
         return None
     return r.json()
 
-lottie_book = load_lottieurl('https://assets9.lottiefiles.com/private_files/lf30_oxurudgk.json')
+#Header
 hcol1, hcol2 = st.beta_columns((3, 1))
 hcol1.title('Reddit Trend Scraping')
 hcol1.subheader('By Henry Bazakas')
 
+#Rocket GIF
+lottie_book = load_lottieurl('https://assets9.lottiefiles.com/private_files/lf30_oxurudgk.json')
 with hcol2: st_lottie(lottie_book, speed=1, height=150, key="initial")
 
+#Body
 col1, col2, col3 = st.beta_columns((3, 3, 2))
 with col3: st.write("This page uses the last 6 hours of comments [r/wallstreetbets]('https://www.reddit.com/r/wallstreetbets/new/') and [r/satoshistreetbets]('https://www.reddit.com/r/satoshistreetbets/new/') to rank the 10 most talked about stocks and cryptocurrencies on Reddit right now. Scraping the data and tabulating the top tickers takes about 60 seconds. \n\nThese rankings are meant to be used for tracking trends and informing investment decisions. Invest at your own risk.")
 
+#Footer
+st.write('')
 st.write("This page was created by Henry Bazakas in March 2021. If you\'re interested in how it was built or in Henry\'s other work, take a look at his [Github]('https://github.com/hbazakas'). If you've made a fortune investing in securities you learned about here, please let him know via a [tweet]('https://twitter.com/bighenbazakas') or [LinkedIn]('https://www.linkedin.com/in/henry-bazakas-471201143/') message. Thanks for checking out this project!")
 
+#Code that fills in body
 def comments_scraper(sub, comment_age, hot, case_sensitive = False):
     #Reddit API
     reddit = praw.Reddit(client_id='HG7dA6CRLvCD_w',
