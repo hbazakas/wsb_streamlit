@@ -27,6 +27,8 @@ with hcol2: st_lottie(lottie_book, speed=1, height=150, key="initial")
 
 #Body
 col1, col2, spacer, col3 = st.beta_columns((1, 1, 0.1, 1))
+col1.header("r/wallstreetbets leaderboard")
+col2.header("r/satoshistreetbets leaderboard")
 with col3: st.write("This page uses the last 6 hours of comments [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/new/) and [r/satoshistreetbets](https://www.reddit.com/r/satoshistreetbets/new/) to rank the 10 most talked about stocks and cryptocurrencies on Reddit right now. Scraping the data and tabulating the top tickers takes about 60 seconds. \n\nThese rankings are meant to be used for tracking trends and informing investment decisions. Invest at your own risk.")
 
 #Footer
@@ -160,8 +162,5 @@ def assemble_rankings(n, hours, hot):
 
 wsb, ssb = assemble_rankings(10, 6, 20)
 
-col1.header("r/wallstreetbets leaderboard")
 col1.write(wsb)
-
-col2.header("r/satishistreetbets leaderboard")
 col2.write(ssb)
