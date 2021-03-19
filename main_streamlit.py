@@ -17,7 +17,6 @@ def load_lottieurl(url: str):
     return r.json()
 
 lottie_book = load_lottieurl('https://assets1.lottiefiles.com/packages/lf20_BiAtYn.json')
-st_lottie(lottie_book, speed=0.25, height=200, key="initial")
 
 st.title('Reddit Trend Scraping')
 st.subheader('By Henry Bazakas')
