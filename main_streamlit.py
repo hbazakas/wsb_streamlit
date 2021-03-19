@@ -27,11 +27,11 @@ with hcol2: st_lottie(lottie_book, speed=1, height=150, key="initial")
 
 #Body
 col1, col2, spacer, col3 = st.beta_columns((1, 1, 0.1, 1))
-with col3: st.write("This page uses the last 6 hours of comments [r/wallstreetbets]('https://www.reddit.com/r/wallstreetbets/new/') and [r/satoshistreetbets]('https://www.reddit.com/r/satoshistreetbets/new/') to rank the 10 most talked about stocks and cryptocurrencies on Reddit right now. Scraping the data and tabulating the top tickers takes about 60 seconds. \n\nThese rankings are meant to be used for tracking trends and informing investment decisions. Invest at your own risk.")
+with col3: st.write("This page uses the last 6 hours of comments [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/new/) and [r/satoshistreetbets](https://www.reddit.com/r/satoshistreetbets/new/) to rank the 10 most talked about stocks and cryptocurrencies on Reddit right now. Scraping the data and tabulating the top tickers takes about 60 seconds. \n\nThese rankings are meant to be used for tracking trends and informing investment decisions. Invest at your own risk.")
 
 #Footer
 st.write('')
-st.write("This page was created by Henry Bazakas in March 2021. If you\'re interested in how it was built or in Henry\'s other work, take a look at his [Github]('https://github.com/hbazakas'). If you've made a fortune investing in securities you learned about here, please let him know via a [tweet]('https://twitter.com/bighenbazakas') or [LinkedIn]('https://www.linkedin.com/in/henry-bazakas-471201143/') message. Thanks for checking out this project! See you on the moon!")
+st.write("This page was created by Henry Bazakas in March 2021. If you\'re interested in how it was built or in Henry\'s other work, take a look at his [Github](https://github.com/hbazakas). If you've made a fortune investing in securities you learned about here, please let him know via a [tweet](https://twitter.com/bighenbazakas) or [LinkedIn](https://www.linkedin.com/in/henry-bazakas-471201143/) message. Thanks for checking out this project! See you on the moon!")
 
 #Code that fills in body
 def comments_scraper(sub, comment_age, hot, case_sensitive = False):
