@@ -80,7 +80,7 @@ def wsb_leaderboard(n, hours, hot):
     soup = BeautifulSoup(page.content, 'lxml')
     wsb_tickers = soup.find_all('li')
 
-    for i in wsb_tickers[12:-18]:
+    for i in wsb_tickers[14:-18]:
         #print(i.text.split(" - "))
         wsb_ticker_list.append(i.text.split(" - ")[0])
         wsb_name_list.append(i.text.split(" - ")[1])
