@@ -80,10 +80,10 @@ def wsb_leaderboard(n, hours, hot):
     soup = BeautifulSoup(page.content, 'lxml')
     wsb_tickers = soup.find_all('li')
 
-    for i in wsb_tickers[14:-18]:
-        #print(i.text.split(" - "))
-        wsb_ticker_list.append(i.text.split(" - ")[0])
-        wsb_name_list.append(i.text.split(" - ")[1])
+    for i in wsb_tickers:
+        if " - " in i.text:
+            wsb_ticker_list.append(i.text.split(" - ")[0])
+            wsb_name_list.append(i.text.split(" - ")[1])
 
     #Scrape Comments
     wsb_comments = comments_scraper('wallstreetbets', hours, hot, case_sensitive = True)
@@ -105,6 +105,7 @@ def wsb_leaderboard(n, hours, hot):
     wsb_tickers_and_counts = wsb_tickers_and_counts.sort_values(by = ['Mentions'], ascending = False)[0:n]
     wsb_tickers_and_counts.index = range(1,n+1)
     return wsb_tickers_and_counts
+
 
 def ssb_leaderboard(n, hours, hot):
     #Crypto Tickers and Names
