@@ -114,10 +114,10 @@ def ssb_leaderboard(n, hours, hot):
     URL = 'https://coinmarketcap.com/all/views/all/'
     page = requests.get(URL)
     soup = BeautifulSoup(page.content, 'lxml')
-    ssb_names = soup.find_all('td',
-                            class_ = 'cmc-table__cell cmc-table__cell--sticky cmc-table__cell--sortable cmc-table__cell--left cmc-table__cell--sort-by__name')
-    ssb_tickers = soup.find_all('td',
-                            class_ = 'cmc-table__cell cmc-table__cell--sortable cmc-table__cell--left cmc-table__cell--sort-by__symbol')
+    ssb_names = soup.find_all('a',
+                            class_ = 'cmc-table__column-name--name cmc-link')
+    ssb_tickers = soup.find_all('a',
+                            class_ = 'cmc-table__column-name--symbol cmc-link')
 
     for i in range(len(ssb_names)):
         ssb_name_list.append(ssb_names[i].text.split('\">"')[0])
